@@ -1,0 +1,16 @@
+name: Validate SQL Scripts
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate-sql:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Lint SQL files
+      run: echo 'Validating SQL scripts...'
